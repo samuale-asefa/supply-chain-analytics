@@ -1,0 +1,6 @@
+product,daily_demand,lead_time_days,current_stock,unit_cost
+Steel Pipes,20,7,200,45
+Copper Fittings,35,5,100,22
+PVC Valves,15,3,60,8
+Brass Connectors,50,6,400,15
+Aluminum Flanges,10,8,50,60
