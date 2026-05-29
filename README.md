@@ -1,29 +1,41 @@
-# Inventory Reorder Point Analysis
+# Supply Chain Analytics Portfolio
+### Sam Asefa | Economics @ Towson University | Supply Chain & Logistics
 
-## What This Does
-This tool monitors product inventory levels, identifies reorder triggers, and automatically dispatches a purchase order via email — no manual intervention required. Update the CSV, run the script, and the pipeline handles the rest.
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![SQL](https://img.shields.io/badge/SQL-SQLite-lightgrey)
+![pandas](https://img.shields.io/badge/pandas-2.0-green)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-## The Problem It Solves
-Stockouts before replenishment orders arrive are one of the most avoidable inefficiencies in supply chain operations. This project automates the demand monitoring and procurement notification process — eliminating the manual effort of tracking stock levels across multiple SKUs.
+---
 
-## How It Works
-1. Ingests inventory data from a CSV file (editable in Excel or any text editor)
-2. Calculates each product's **reorder point** — the threshold at which a replenishment order must be triggered:
-   > Reorder Point = Daily Demand × Lead Time (days)
-3. Flags any SKU that has fallen below its reorder threshold
-4. Calculates the exact order quantity needed to return to a safe stock position
-5. Loads the dataset into a SQLite database and queries flagged items using SQL
-6. Generates a bar chart comparing current stock vs reorder point across all SKUs
-7. Automatically dispatches a formatted purchase order to the designated recipient when stock is critical
+## About This Repo
+A growing collection of supply chain and operations analytics projects built to solve real operational problems — not just pass a class. Each project uses industry-relevant data, real-world methodologies, and tools used by analysts at energy companies, logistics firms, defense contractors, and retailers.
 
-## Tools Used
-- Python, pandas, SQLite / SQL, matplotlib, smtplib
+---
 
-## Output
-![Inventory Chart](inventory_chart.png)
+## Projects
 
-## Key Features
-- **CSV-driven** — swap in any inventory data without touching the codebase
-- **SQL querying** — filters and ranks at-risk SKUs by order urgency
-- **Automated procurement alerts** — triggers a purchase order the moment a reorder threshold is crossed
-- **Scalable** — adaptable to any industry, product type, or order volume
+| # | Project | Tools | Focus Area |
+|---|---------|-------|------------|
+| 01 | [Strait of Hormuz Risk Analyzer](./01_hormuz_risk_analysis/) | Python, pandas, matplotlib | Risk Management, Energy, Consulting |
+| 02 | [Inventory Reorder Point Analysis](./02_inventory_reorder/) | Python, pandas, SQL, matplotlib | Inventory, Procurement, Logistics |
+
+---
+
+## Skills Demonstrated
+- Supply chain risk modeling and scenario analysis
+- Inventory optimization and reorder point calculation
+- Data ingestion, transformation, and querying with pandas and SQL
+- Geopolitical risk quantification using real EIA trade flow data
+- Automated procurement alerts and purchase order generation
+- Data visualization and analyst-style reporting
+
+---
+
+## Data Sources
+- U.S. Energy Information Administration (EIA) — World Oil Transit Chokepoints Q1 2025
+- Fictional but operationally realistic inventory data modeled after real SKU management workflows
+
+---
+
+*Actively building — new projects added regularly*
