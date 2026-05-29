@@ -1,4 +1,4 @@
-# 02 — Strait of Hormuz Supply Chain Risk Analyzer
+# 01 — Strait of Hormuz Supply Chain Risk Analyzer
 
 ## Overview
 A quantitative risk analysis tool that models supply chain disruption scenarios
