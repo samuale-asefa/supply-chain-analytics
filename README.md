@@ -1,5 +1,5 @@
 # Supply Chain Analytics Portfolio
-### Sam Asefa | Economics @ Towson University | Supply Chain & Logistics
+### Samuale Asefa | Economics @ Towson University | Supply Chain & Logistics
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![SQL](https://img.shields.io/badge/SQL-SQLite-lightgrey)
