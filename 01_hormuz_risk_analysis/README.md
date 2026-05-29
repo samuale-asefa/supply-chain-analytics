@@ -43,3 +43,5 @@ at firms like Colonial Pipeline, Booz Allen Hamilton, and Leidos.
 
 ## Output
 ![Hormuz Risk Chart](hormuz_risk_chart.png)
+## Risk Index Heat Map
+![Hormuz Heat Map](hormuz_heatmap.png)
