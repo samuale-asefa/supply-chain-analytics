@@ -89,7 +89,32 @@ axes[2].set_title('Daily Revenue Impact - Full Closure')
 plt.tight_layout()
 plt.savefig('hormuz_risk_chart.png')
 plt.show()
+import numpy as np
 
+# ── HEAT MAP: Country Risk Exposure by Factor ─────────────────────────────────
+heat_data = df_sorted[['country']].copy()
+heat_data['Flow Share %'] = df_sorted['pct_of_total']
+heat_data['Supply Vulnerability'] = df_sorted['supply_vulnerability']
+heat_data['Overall Risk Score'] = df_sorted['exposure_score']
+heat_data = heat_data.set_index('country')
+
+fig2, ax = plt.subplots(figsize=(8, 6))
+im = ax.imshow(heat_data.values, cmap='RdYlGn_r', aspect='auto')
+
+ax.set_xticks(range(len(heat_data.columns)))
+ax.set_xticklabels(heat_data.columns, rotation=15)
+ax.set_yticks(range(len(heat_data.index)))
+ax.set_yticklabels(heat_data.index)
+
+for i in range(len(heat_data.index)):
+    for j in range(len(heat_data.columns)):
+        ax.text(j, i, round(heat_data.values[i, j], 1), ha='center', va='center', color='black', fontsize=9)
+
+plt.colorbar(im, ax=ax, label='Risk Level')
+ax.set_title('Country Risk Exposure Heat Map — Strait of Hormuz (EIA Q1 2025)', fontweight='bold')
+plt.tight_layout()
+plt.savefig('hormuz_heatmap.png')
+plt.show()
 # ── 5. RISK ASSESSMENT MEMO ───────────────────────────────────────────────────
 memo = """
 ================================================================================
