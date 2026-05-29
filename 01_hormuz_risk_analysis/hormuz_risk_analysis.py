@@ -91,27 +91,52 @@ plt.savefig('hormuz_risk_chart.png')
 plt.show()
 import numpy as np
 
-# ── HEAT MAP: Country Risk Exposure by Factor ─────────────────────────────────
+# ── HEAT MAP: Normalized Risk Index Model ─────────────────────────────────────
+from sklearn.preprocessing import MinMaxScaler
+
+# Define three distinct risk dimensions
 heat_data = df_sorted[['country']].copy()
-heat_data['Flow Share %'] = df_sorted['pct_of_total']
-heat_data['Supply Vulnerability'] = df_sorted['supply_vulnerability']
-heat_data['Overall Risk Score'] = df_sorted['exposure_score']
+
+# Dimension 1: Supply Dependence — how much of their oil comes through Hormuz
+heat_data['Supply Dependence'] = df_sorted['pct_of_total'].values
+
+# Dimension 2: Reroute Sensitivity — how hard is it to find alternatives
+heat_data['Reroute Sensitivity'] = df_sorted['supply_vulnerability'].values
+
+# Dimension 3: Price Exposure — barrels at risk x oil price, normalized by flow
+full_closure = results_df[results_df['scenario'] == 'Full Closure (100%)'].copy()
+full_closure = full_closure.set_index('country')
+heat_data['Price Exposure'] = [
+    full_closure.loc[c, 'revenue_impact_per_day_usd'] / 1_000_000 
+    if c in full_closure.index else 0 
+    for c in df_sorted['country']
+]
+
 heat_data = heat_data.set_index('country')
 
-fig2, ax = plt.subplots(figsize=(8, 6))
-im = ax.imshow(heat_data.values, cmap='RdYlGn_r', aspect='auto')
+# Normalize all dimensions to 0-1 scale
+scaler = MinMaxScaler()
+normalized = pd.DataFrame(
+    scaler.fit_transform(heat_data),
+    columns=heat_data.columns,
+    index=heat_data.index
+)
 
-ax.set_xticks(range(len(heat_data.columns)))
-ax.set_xticklabels(heat_data.columns, rotation=15)
-ax.set_yticks(range(len(heat_data.index)))
-ax.set_yticklabels(heat_data.index)
+fig2, ax = plt.subplots(figsize=(9, 6))
+im = ax.imshow(normalized.values, cmap='RdYlGn_r', aspect='auto', vmin=0, vmax=1)
 
-for i in range(len(heat_data.index)):
-    for j in range(len(heat_data.columns)):
-        ax.text(j, i, round(heat_data.values[i, j], 1), ha='center', va='center', color='black', fontsize=9)
+ax.set_xticks(range(len(normalized.columns)))
+ax.set_xticklabels(normalized.columns, rotation=15)
+ax.set_yticks(range(len(normalized.index)))
+ax.set_yticklabels(normalized.index)
 
-plt.colorbar(im, ax=ax, label='Risk Level')
-ax.set_title('Country Risk Exposure Heat Map — Strait of Hormuz (EIA Q1 2025)', fontweight='bold')
+for i in range(len(normalized.index)):
+    for j in range(len(normalized.columns)):
+        ax.text(j, i, f'{normalized.values[i, j]:.2f}', 
+                ha='center', va='center', color='black', fontsize=9)
+
+plt.colorbar(im, ax=ax, label='Normalized Risk (0 = Low, 1 = High)')
+ax.set_title('Hormuz Risk Index Model — Normalized by Dimension (EIA Q1 2025)', fontweight='bold')
 plt.tight_layout()
 plt.savefig('hormuz_heatmap.png')
 plt.show()
