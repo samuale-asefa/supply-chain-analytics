@@ -1,0 +1,57 @@
+
+================================================================================
+        SUPPLY CHAIN RISK ASSESSMENT -- STRAIT OF HORMUZ
+        Prepared by: Sam Asefa | Data Source: EIA Q1 2025
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+The Strait of Hormuz remains the world's most critical oil transit chokepoint,
+carrying 20.1 million barrels per day -- approximately 20% of global petroleum
+consumption. Following the Iranian Parliament's June 2025 closure proposal amid
+the US-Iran conflict, disruption risk has reached its highest level in decades.
+
+SCENARIO ANALYSIS
+-----------------
+  Partial Closure (25%)
+  -> Barrels disrupted per day: 4,525,000
+  -> Global revenue impact per day: $384.6M USD
+
+  Full Closure (100%)
+  -> Barrels disrupted per day: 18,100,000
+  -> Global revenue impact per day: $1,538.5M USD
+
+  Cape of Good Hope Reroute
+  -> Barrels disrupted per day: 18,100,000
+  -> Global revenue impact per day: $1,538.5M USD
+
+
+HIGHEST RISK COUNTRIES
+----------------------
+  China -- Risk Score: 57.7 | Alternative Supply: Medium
+
+KEY FINDINGS
+------------
+  1. China absorbs 37.7% of Hormuz crude -- a full closure would remove
+     5.35M barrels/day from the world's largest oil importer.
+
+  2. Japan and South Korea have virtually no alternative supply routes,
+     making them acutely vulnerable to even partial disruptions.
+
+  3. The US and Europe are largely insulated due to domestic production
+     and diversified import portfolios.
+
+  4. A Cape of Good Hope reroute adds ~15 days transit time and
+     $37.5M/day in additional shipping costs globally.
+
+RECOMMENDATIONS
+---------------
+  1. Importers with Low alternative supply should accelerate strategic
+     petroleum reserve builds and diversify sourcing to West Africa
+     and North America.
+
+  2. Energy procurement teams should hedge price exposure via futures
+     contracts ahead of any escalation window.
+
+  3. Logistics operators should pre-position rerouting contracts with
+     Cape of Good Hope-capable carriers as contingency.
