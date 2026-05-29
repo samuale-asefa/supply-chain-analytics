@@ -72,7 +72,7 @@ from email.mime.multipart import MIMEMultipart
 # ── 6. EMAIL PURCHASE ORDER ───────────────────────────────────────────────────
 SENDER = "towsonuniversity8@gmail.com"
 RECEIVER = "towsonuniversity8@gmail.com"
-APP_PASSWORD = "oihm uerm aglh gkit"
+APP_PASSWORD = "zxbo ekps uudw zjpr"
 
 if not result.empty:
     body = "AUTOMATED PURCHASE ORDER\n\n"
