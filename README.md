@@ -36,7 +36,7 @@ A growing collection of supply chain and operations analytics projects built to 
 ## Data Sources
 - U.S. Energy Information Administration (EIA) — World Oil Transit Chokepoints Q1 2025
 - Fictional but operationally realistic inventory data modeled after real SKU management workflows
-
+- Sourced GAO reporting and federal procurement data (USASpending.gov) to ground a fictional program budget in real-world defense acquisition patterns.
 ---
 
 *Actively building — new projects added regularly*
