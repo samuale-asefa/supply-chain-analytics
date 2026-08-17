@@ -17,9 +17,9 @@ A growing collection of supply chain and operations analytics projects built to 
 
 | # | Project | Tools | Focus Area |
 |---|---------|-------|------------|
-| 01 | [Strait of Hormuz Risk Analyzer](./01_hormuz_risk_analysis/) | Python, pandas, matplotlib | Risk Management, Energy, Consulting |
-| 02 | [Inventory Reorder Point Analysis](./02_inventory_reorder/) | Python, pandas, SQL, matplotlib | Inventory, Procurement, Logistics |
-
+| 01 | [Strait of Hormuz Risk Analyzer](01_hormuz_risk_analysis/) | Python, pandas, matplotlib | Risk Management, Energy, Consulting |
+| 02 | [Inventory Reorder Point Analysis](02_inventory_reorder/) | Python, pandas, SQL, matplotlib | Inventory, Procurement, Logistics |
+| 03 | [Program Budget & Cost Variance Tracker](03_budget_variance_tracker/) | Excel, Scenario Manager, Goal Seek | Government Acquisition, Program/Budget Analysis, Defense |
 ---
 
 ## Skills Demonstrated
@@ -29,7 +29,8 @@ A growing collection of supply chain and operations analytics projects built to 
 - Geopolitical risk quantification using real EIA trade flow data
 - Automated procurement alerts and purchase order generation
 - Data visualization and analyst-style reporting
-
+- Program budget variance tracking and Excel-based financial modeling
+- Contractor bid comparison and cost/price analysis (Scenario Manager, Goal Seek)
 ---
 
 ## Data Sources
